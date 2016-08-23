@@ -1,0 +1,8 @@
+
+ld (r0),r0    read from memory    1
+ld (r0),r1    read from memory    1
+ld 4(r0), r2  read from memory    4
+ld 4(r1), r3  read from memory    4
+st r3, (r2)   write from memory   1
+ld 4(r2), r3  read from memory    4   
+st r3, (r1)   write from memory   1

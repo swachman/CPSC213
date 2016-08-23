@@ -1,0 +1,3 @@
+There is a dangling pointer in pop() function. since we already free w, but we call e again in return e->name. Therefore, the value of w,x,y,z are all dangling pointer.
+
+When we push “A”,”B” into stack and get pop a element store in w, however, since it is a dangling pointer, there is a chance that when we push “C” and ”D” w is point to new element. So we need to fix it. we cannot free e and then call/return e.

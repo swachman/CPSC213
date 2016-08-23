@@ -1,0 +1,1 @@
+the problem is the list_delete_element. it is referenced from the tree but call free to it. when we free e, the node pointer in tree become to a dangling pointer, therefore, it cannot give us the correct value for the tree that not delete their pointer.
