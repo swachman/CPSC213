@@ -1,0 +1,6 @@
+2a. Reg put the return address in r6, and use j (r6) to jump back. stack is not used.
+    stack store return address in r6, but save at the beginning of ping as a stack. Then, it restores it from the stack at the end.
+
+2b. allows ping to call another procedure.
+
+2c. it executes faster.

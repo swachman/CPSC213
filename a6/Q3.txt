@@ -1,0 +1,19 @@
+3a. 7-12 and 20-22
+
+3b. 15-16 and 29-31
+
+3c.
+replace 20 with: ld -20,r0
+replace 22 with: st r6,16(r5)
+replace 23 with: ld 20(r5), r0
+replace 25 with: ld  24(r5), r0
+replace 29 with: ld  16(r5), r6
+replace 30 with: ld  20, r0
+
+3d.
+replace 7 with:  ld $-12, r0
+insert after 12:
+ld $2,r0    #r0 = 2 value of a2
+st r0,8(r5) #store value of a2 to stack
+replace 15 with: ld $12,  r0
+
