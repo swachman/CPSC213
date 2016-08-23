@@ -1,0 +1,1 @@
+s and x are both static variable, therefore, the only value stored in memory is s.x[i].

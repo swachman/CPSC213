@@ -1,0 +1,1 @@
+One access to read s.z, and other one for s.z->x[i]
