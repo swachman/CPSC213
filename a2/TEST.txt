@@ -1,0 +1,8 @@
+first load values into R0-R7, which also test if load immediate work correct, check on the left column of SM, and all values correctly update onto it.
+
+then check the ALU/MATH instruction, check if the predict number is the same as the number shows on SM.
+	For example, when check remove instruction, I write down mov r0, r2.
+	This means to load the value in r0 and write into r2, r0 is 			0x01234567, after excuse this instruction , r2 also need to be 		0x01234567. Check the SM, and r2 is 0x01234567 now. Then, this 		instruction is excuse correctly.	
+do the same step for all ALU/MATH instructions
+
+Then test the memory-access instruction. for this part, we need to check the memory in the SM right side. check is the change is our expected. 
