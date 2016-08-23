@@ -1,0 +1,9 @@
+For items to be stay in boundary: 
+  Using the while loop, and have assert to check if the function have exception after running the data.
+
+For dead lock:
+  Adding 10000 of iterations in the main, and run several times to make sure that there is no dead lock happened in the code.
+
+Use of the values:
+  The producer_wait_count and consumer_wait_count gives a general idea of which one (producers or consumers) processed faster. If producer waits more, we could add more consumer and vise versa.
+  The histogram item counts gives a brief idea if the buffer is mostly fully loaded or not, thus we could have a better buffer size.

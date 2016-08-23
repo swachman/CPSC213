@@ -1,0 +1,27 @@
+DATA:
+  $ time ./sRead 10
+  10
+  real    0m0.110s
+
+  $ time ./sRead 1000
+  151168
+  real    0m10.723s
+
+  $ time ./aRead 10
+  10
+  real    0m0.012s
+  
+  $ time ./aRead 1000
+  151168
+  real    0m0.012s
+
+
+  $ time ./aRead 100000
+  99109500490420
+  real    0m0.081s
+
+Observation:
+   The runtime of aRead is grows much slower that sRead, as the number of blocks 	increased.
+
+Explanation:
+   aRead resolves the data read request asynchronously, as it sends all the data block reading request to the disk at the same time. It does not need to disk to complete the DMA process, it saves ~10ms in each iteration.

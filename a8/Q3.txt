@@ -1,0 +1,40 @@
+DATA:
+  $ time ./sRead 10
+  10
+  real    0m0.110s
+
+  $ time ./sRead 1000
+  151168
+  real    0m10.723s
+
+  $ time ./aRead 10
+  10
+  real    0m0.012s
+  
+  $ time ./aRead 1000
+  151168
+  real    0m0.012s
+
+  $ time ./aRead 100000
+  99109500490420
+  real    0m0.081s
+
+  $ time ./tRead 10
+  10
+  real    0m0.018s
+
+  $ time ./tRead 100
+  85328
+  real    0m0.022s
+
+  $ time ./tRead 1000
+  151168
+  real    0m0.071s
+
+Observation:
+  The runtime of tRead is grows a little bit faster than aRead, but compare with sRead, it’s also very significant advantage.
+
+Explanation: 
+  It takes more time since the process of thread takes some time. tRead uses thread blocking and unblocking to avoid waiting for the disk latency. When a thread sent out the reading request, it blocks itself to free the processor for other threads to process. Then, the disk has finished DMA process for the request, the thread will be unblocked and continues.
+
+ 

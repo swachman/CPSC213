@@ -1,0 +1,18 @@
+DATA:
+  $ time ./sRead 10
+  10
+  real    0m0.109s
+
+  $ time ./sRead 100
+  85328
+  real    0m1.073s
+
+  $ time ./sRead 1000
+  151168
+  real    0m10.693s
+
+Observation:
+The runtime of sRead is increasing 10 times from 10 to 100, and 10 times from 100 to 1000.
+
+Explanation:
+sRead reads the data blocks from the simulated disk sequentially with single thread. the latency for the simulated disk is 10ms per block read. So the runtime for sRead is expected to be proportional to the number of blocks.
