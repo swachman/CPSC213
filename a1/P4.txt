@@ -1,0 +1,4 @@
+1. test 1000 it’s a negative number
+2. test 0003 it’s a positive number
+3. test ff ff ff ff, it gives me both -1 on little and big
+and using calculator to change integer to hex number, and make sure the program running correct for both positive and negative number since java only have signed number.
